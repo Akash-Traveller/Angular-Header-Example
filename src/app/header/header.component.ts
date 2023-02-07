@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+
+  userData:any={};
+  getData(data:NgForm)
+  {
+    console.warn(data)
+    this.userData=data
+  }
 
   ngOnInit(): void {
   }
